@@ -22,7 +22,8 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
   const router = useRouter();
   const [openAuthModal, setOpenAuthModal] = React.useState(false);
 
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
+  const searchParams = {} as any;
 
   React.useEffect(() => {
     let toastMessage = '';

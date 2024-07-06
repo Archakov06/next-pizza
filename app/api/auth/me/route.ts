@@ -4,7 +4,8 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    const user = await getUserSession();
+    // const user = await getUserSession();
+    const user = null as any;
 
     if (!user) {
       return NextResponse.json({ message: 'Вы не авторизованы' }, { status: 401 });
