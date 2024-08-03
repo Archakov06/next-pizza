@@ -7,6 +7,7 @@ import { Search } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import { useClickAway, useDebounce } from 'react-use';
+import Image from 'next/image'
 
 interface Props {
   className?: string;
@@ -97,7 +98,13 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
 									index === products.length - 1 && 'hover:rounded-b-xl', // Закругление нижнего края при наведении на последний элемент
 								)}
                 href={`/product/${product.id}`}>
-                <img className="rounded-sm h-8 w-8" src={product.imageUrl} alt={product.name} />
+                <Image
+									width={32}
+									height={32}
+									className='rounded-sm h-8 w-8'
+									src={product.imageUrl}
+									alt={product.name}
+								/>
                 <span>{product.name}</span>
               </Link>
             ))}
